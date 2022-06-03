@@ -14,14 +14,16 @@ func main() {
   }
 
   http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    if r.URL.Path != "/" {
-      http.Redirect(w, r, "/", http.StatusFound)
-      return
-    }
-
-    _, err := w.Write(buf)
-    if err != nil {
-      fmt.Println(err)
+    switch r.URL.Path {
+      case "/":
+        _, err := w.Write(buf)
+        if err != nil {
+          fmt.Println(err)
+        }
+      case "/favicon.ico":
+        http.NotFound(w, r)
+      default:
+        http.Redirect(w, r, "/", http.StatusFound)
     }
   })
 
