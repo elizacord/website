@@ -8,12 +8,13 @@ import (
   "net/http"
 )
 
-var indexBuf bytes.Buffer
+var indexBuf, privacyBuf bytes.Buffer
 
 func init() {
   tmpl := template.Must(template.ParseGlob("views/*.html"))
 
   mustExecuteTemplate(tmpl, &indexBuf, "index.html")
+  mustExecuteTemplate(tmpl, &privacyBuf, "privacy.html")
 }
 
 func mustExecuteTemplate(tmpl *template.Template, w io.Writer, name string) {
@@ -35,6 +36,8 @@ func main() {
     switch r.URL.Path {
       case "/":
         writeResponse(w, &indexBuf)
+      case "/privacy":
+        writeResponse(w, &privacyBuf)
       case "/favicon.ico":
         http.NotFound(w, r)
       default:

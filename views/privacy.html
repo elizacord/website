@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{template "head.html" "Privacy Policy"}}
+    <style>
+      .privacy-section {
+        padding-block: 0.5rem;
+      }
+
+      .privacy-section ul {
+        margin-bottom: 0.5rem;
+      }
+
+      .privacy-section ul:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    {{template "navbar.html"}}
+    <main>
+      <div class="container py-4">
+        <div class="p-5 pt-0">
+          <h3>Privacy Policy</h3>
+          <small style="color: #b5b5b5;">Last updated: June 16, 2022</small>
+          <p></p>
+
+          <ol>
+            <li><a href="#what-information-we-collect">What information we collect</a></li>
+            <li><a href="#how-we-use-your-information">How we use your information</a></li>
+            <li><a href="#how-we-protect-your-information">How we protect your information</a></li>
+            <li><a href="#how-long-we-keep-your-information">How long we keep your information</a></li>
+            <li><a href="#changes-to-this-privacy-policy">Changes to this Privacy Policy</a></li>
+          </ol>
+
+          <div id="what-information-we-collect" class="privacy-section">
+            <h5>What information we collect</h5>
+            Through bot usage:
+            <ul>
+              <li>Guild id.</li>
+              <li>Guild name.</li>
+              <li>Guild roles. <small>This includes their id and name.</small></li>
+              <li>Guild members. <small>This includes their id, username and discriminator.</small></li>
+              <li>Guild messages. <small>Their id and channel id may be stored after the execution of certain commands.</small></li>
+              <li>Guild emojis. <small>Their id may be stored after the execution of certain commands.</small></li>
+            </ul>
+            Through website traffic:
+            <ul>
+              <li>IP address.</li>
+            </ul>
+          </div>
+
+          <div id="how-we-use-your-information" class="privacy-section">
+            <h5>How we use your information</h5>
+            Your information is used to ensure the proper functioning of our services.<br>
+            We take privacy very seriously, and therefore we don't share any of your information with third parties.
+          </div>
+
+          <div id="how-we-protect-your-information" class="privacy-section">
+            <h5>How we protect your information</h5>
+            All information sent within our services is encrypted both in transit and at rest.
+          </div>
+
+          <div id="how-long-we-keep-your-information" class="privacy-section">
+            <h5>How long we keep your information</h5>
+            Any information is retained for as long as it's needed for the purposes for which we collected it.<br>
+            Whenever Eliza looses access to certain information (e.g. when a member leaves a guild), such information gets deleted from our storage.
+          </div>
+
+          <div id="changes-to-this-privacy-policy" class="privacy-section">
+            <h5>Changes to this Privacy Policy</h5>
+            We may alter the contents of this Privacy Policy at any time.
+            The date the last changes were published is always indicated.
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
