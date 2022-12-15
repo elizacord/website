@@ -1,36 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{template "head.html" "Terms of Service"}}
-    <style>
-      #title {
-        margin-bottom: 0;
-      }
+    <%
+      #[allow(non_upper_case_globals)]
+      const title: &str = "Eliza | Terms of Service";
 
-      #last-updated {
-        display: inline-block;
-        margin-bottom: 1rem;
-        color: #b5b5b5;
-      }
-
-      .terms-section {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-
-      .terms-section__title {
-        margin-bottom: 0.25rem;
-      }
-
-      #definitions__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-    </style>
+      include!("head.stpl");
+    %>
   </head>
   <body>
-    {{template "navbar.html"}}
+    <% include!("navbar.stpl"); %>
     <main>
       <div class="container py-4">
         <div class="p-5 pt-0">

@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{template "head.html" "Privacy Policy"}}
-    <style>
-      #title {
-        margin-bottom: 0;
-      }
+    <%
+      #[allow(non_upper_case_globals)]
+      const title: &str = "Eliza | Privacy Policy";
 
-      #last-updated {
-        display: inline-block;
-        margin-bottom: 1rem;
-        color: #b5b5b5;
-      }
-
-      .privacy-section {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-
-      .privacy-section__title {
-        margin-bottom: 0.25rem;
-      }
-    </style>
+      include!("head.stpl");
+    %>
   </head>
   <body>
-    {{template "navbar.html"}}
+    <% include!("navbar.stpl"); %>
     <main>
       <div class="container py-4">
         <div class="p-5 pt-0">

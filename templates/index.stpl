@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{template "head.html" "Probably a good bot"}}
+  <head>
+    <%
+      #[allow(non_upper_case_globals)]
+      const title: &str = "Eliza | Bringing voice-controlled music playback on Discord";
+
+      include!("head.stpl");
+    %>
+  </head>
   <body>
-    {{template "navbar.html"}}
+    <% include!("navbar.stpl"); %>
     <main>
       <div class="container py-4">
         <div class="p-5 mb-4">

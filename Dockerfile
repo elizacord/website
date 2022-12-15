@@ -1,6 +1,6 @@
-FROM golang:1.18
-WORKDIR /usr/src/eliza-website
+FROM rust:1.64
+WORKDIR /usr/src/eliza.gg
 COPY . .
-RUN go build main.go
+RUN cargo build --release
 EXPOSE 443
-CMD ./main
+CMD ./target/release/eliza-website

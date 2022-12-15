@@ -1,9 +1,0 @@
-version: '3.9'
-
-services:
-  eliza-website:
-    image: eliza-website
-    build: .
-    ports:
-      - "443:443"
-    restart: unless-stopped
