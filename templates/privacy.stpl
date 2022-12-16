@@ -14,7 +14,7 @@
       <div class="container py-4">
         <div class="p-5 pt-0">
           <h3 id="title">Privacy Policy</h3>
-          <small id="last-updated">Last updated: December 5, 2022</small>
+          <small id="last-updated">Last updated: December 16, 2022</small>
 
           <ol>
             <li><a href="#what-information-we-collect">What information we collect</a></li>
@@ -27,7 +27,7 @@
           <div id="what-information-we-collect" class="privacy-section">
             <h5 class="privacy-section__title">What information we collect</h5>
             <small>
-              When you invite Eliza in a guild we may store the guild's id, name, member ids, usernames and discriminators.<br>
+              When you invite Eliza in a guild we may store the guild's id, member ids, usernames and discriminators.<br>
               When voice recognition is enabled, we may process voice data in order to provide speech-based commands.
               Such data and the related transcripts never get stored nor leave our services as we do not rely on third-party services to analyze speech.
             </small>
