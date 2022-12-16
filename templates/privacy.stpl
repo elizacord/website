@@ -27,7 +27,7 @@
           <div id="what-information-we-collect" class="privacy-section">
             <h5 class="privacy-section__title">What information we collect</h5>
             <small>
-              When you invite Eliza in a guild we may store the guild's id, member ids, usernames and discriminators.<br>
+              When you invite Eliza in a guild we may store the guild's id and the id of each member.<br>
               When voice recognition is enabled, we may process voice data in order to provide speech-based commands.
               Such data and the related transcripts never get stored nor leave our services as we do not rely on third-party services to analyze speech.
             </small>
