@@ -5,29 +5,29 @@
       #[allow(non_upper_case_globals)]
       const title: &str = "Eliza | Premium (Coming Soon)";
 
-      include!("head.stpl");
+      include!("components/head.stpl");
     %>
     <link rel="stylesheet" type="text/css" href="/static/styles/premium.css">
   </head>
   <body>
-    <% include!("desktop-nav.stpl"); %>
+    <% include!("components/desktop-nav.stpl"); %>
 
     <main>
       <div class="container" id="jumbotron">
         <div id="jumbotron-inner">
-          <% include!("jumbotron-header.stpl"); %>
+          <% include!("components/jumbotron-header.stpl"); %>
 
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
               <h1 id="jumbotron__title">Premium</h1>
               <small id="jumbotron__subtitle">Coming soon, stay tuned by joining the <a href="/help" target="_blank">support server</a>.</small>
             </div>
-            <% include!("mobile-nav.stpl"); %>
+            <% include!("components/mobile-nav.stpl"); %>
           </div>
         </div>
       </div>
 
-      <% include!("footer.stpl"); %>
+      <% include!("components/footer.stpl"); %>
     </main>
 
     <script src="/static/scripts/main.js"></script>

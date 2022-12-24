@@ -5,16 +5,16 @@
       #[allow(non_upper_case_globals)]
       const title: &str = "Eliza | Privacy Policy";
 
-      include!("head.stpl");
+      include!("components/head.stpl");
     %>
   </head>
   <body>
-    <% include!("desktop-nav.stpl"); %>
+    <% include!("components/desktop-nav.stpl"); %>
 
     <main>
       <div class="container" id="jumbotron">
         <div id="jumbotron-inner">
-          <% include!("jumbotron-header.stpl"); %>
+          <% include!("components/jumbotron-header.stpl"); %>
 
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
@@ -28,7 +28,7 @@
                 <li><a href="#changes">Changes</a></li>
               </ul>
             </div>
-            <% include!("mobile-nav.stpl"); %>
+            <% include!("components/mobile-nav.stpl"); %>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
         </section>
       </div>
 
-      <% include!("footer.stpl"); %>
+      <% include!("components/footer.stpl"); %>
     </main>
 
     <script src="/static/scripts/main.js"></script>

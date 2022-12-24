@@ -5,17 +5,17 @@
       #[allow(non_upper_case_globals)]
       const title: &str = "Eliza | Bringing voice-controlled music playback on Discord";
 
-      include!("head.stpl");
+      include!("components/head.stpl");
     %>
     <link rel="stylesheet" type="text/css" href="/static/styles/index.css">
   </head>
   <body>
-    <% include!("desktop-nav.stpl"); %>
+    <% include!("components/desktop-nav.stpl"); %>
 
     <main>
       <div class="container" id="jumbotron">
         <div id="jumbotron-inner">
-          <% include!("jumbotron-header.stpl"); %>
+          <% include!("components/jumbotron-header.stpl"); %>
 
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
@@ -26,12 +26,12 @@
                 on <a id="discord" href="https://discord.com" target="_blank">Discord</a>
               </h1>
             </div>
-            <% include!("mobile-nav.stpl"); %>
+            <% include!("components/mobile-nav.stpl"); %>
           </div>
         </div>
       </div>
 
-      <% include!("footer.stpl"); %>
+      <% include!("components/footer.stpl"); %>
     </main>
 
     <script src="/static/scripts/main.js"></script>
