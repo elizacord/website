@@ -1,0 +1,35 @@
+#jumbotron__content-inner {
+  height: fit-content;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+#discord {
+  display: inline-block;
+  padding: 0.1875rem 0.625rem;
+  border-radius: 5rem;
+  vertical-align: middle;
+  transform: translateY(-0.2ch);
+  font-size: 1.5rem;
+  text-decoration: none;
+  background: #5865f2;
+  color: var(--secondary-background-color);
+}
+
+#discord:hover {
+  filter: none;
+}
+
+@media (min-width: 720px) {
+  #discord {
+    padding: 0.25rem 1rem;
+    font-size: 2.125rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  #discord {
+    padding: 0.3rem 1rem;
+    font-size: 2.75rem;
+  }
+}

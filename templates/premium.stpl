@@ -3,11 +3,11 @@
   <head>
     <%
       #[allow(non_upper_case_globals)]
-      const title: &str = "Eliza | Bringing voice-controlled music playback on Discord";
+      const title: &str = "Eliza | Premium (Coming Soon)";
 
       include!("head.stpl");
     %>
-    <link rel="stylesheet" type="text/css" href="/static/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/premium.css">
   </head>
   <body>
     <% include!("desktop-nav.stpl"); %>
@@ -19,12 +19,8 @@
 
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
-              <h1 id="jumbotron__title">
-                Bringing<br>
-                voice-controlled<br>
-                music playback<br>
-                on <a id="discord" href="https://discord.com" target="_blank">Discord</a>
-              </h1>
+              <h1 id="jumbotron__title">Premium</h1>
+              <small id="jumbotron__subtitle">Coming soon, stay tuned by joining the <a href="/help" target="_blank">support server</a>.</small>
             </div>
             <% include!("mobile-nav.stpl"); %>
           </div>

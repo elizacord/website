@@ -9,63 +9,75 @@
     %>
   </head>
   <body>
-    <% include!("navbar.stpl"); %>
+    <% include!("desktop-nav.stpl"); %>
+
     <main>
-      <div class="container py-4">
-        <div class="p-5 pt-0">
-          <h3 id="title">Privacy Policy</h3>
-          <small id="last-updated">Last updated: December 16, 2022</small>
+      <div class="container" id="jumbotron">
+        <div id="jumbotron-inner">
+          <% include!("jumbotron-header.stpl"); %>
 
-          <ol>
-            <li><a href="#what-information-we-collect">What information we collect</a></li>
-            <li><a href="#how-we-use-your-information">How we use your information</a></li>
-            <li><a href="#how-we-protect-your-information">How we protect your information</a></li>
-            <li><a href="#how-long-we-keep-your-information">How long we keep your information</a></li>
-            <li><a href="#changes">Changes</a></li>
-          </ol>
-
-          <div id="what-information-we-collect" class="privacy-section">
-            <h5 class="privacy-section__title">What information we collect</h5>
-            <small>
-              When you invite Eliza in a guild we may store the guild's id and the id of each member.<br>
-              When voice recognition is enabled, we may process voice data in order to provide speech-based commands.
-              Such data and the related transcripts never get stored nor leave our services as we do not rely on third-party services to analyze speech.
-            </small>
-          </div>
-
-          <div id="how-we-use-your-information" class="privacy-section">
-            <h5 class="privacy-section__title">How we use your information</h5>
-            <small>
-              Your information is used to ensure the proper functioning of our services.<br>
-              We take privacy very seriously, and therefore we don't share any of your information with third parties.<br>
-
-            </small>
-          </div>
-
-          <div id="how-we-protect-your-information" class="privacy-section">
-            <h5 class="privacy-section__title">How we protect your information</h5>
-            <small>
-              Whenever your information leaves one of our servers it is encrypted.
-            </small>
-          </div>
-
-          <div id="how-long-we-keep-your-information" class="privacy-section">
-            <h5 class="privacy-section__title">How long we keep your information</h5>
-            <small>
-              Any information is retained for as long as it's needed for the purposes for which we collected it.<br>
-              Whenever Eliza loses access to some information (e.g. when a member leaves a guild), such information gets deleted from our storage.
-            </small>
-          </div>
-
-          <div id="changes" class="privacy-section">
-            <h5 class="privacy-section__title">Changes</h5>
-            <small>
-              We may alter the contents of this Privacy Policy at any time for any reason.<br>
-              The date the last changes were published is always indicated.
-            </small>
+          <div id="jumbotron__content">
+            <div id="jumbotron__content-inner">
+              <h1 id="jumbotron__title">Privacy Policy</h1>
+              <small id="jumbotron__subtitle">Last updated: December 16, 2022</small>
+              <ul id="table-of-contents">
+                <li><a href="#what-information-we-collect">What information we collect</a></li>
+                <li><a href="#how-we-use-your-information">How we use your information</a></li>
+                <li><a href="#how-we-protect-your-information">How we protect your information</a></li>
+                <li><a href="#how-long-we-keep-your-information">How long we keep your information</a></li>
+                <li><a href="#changes">Changes</a></li>
+              </ul>
+            </div>
+            <% include!("mobile-nav.stpl"); %>
           </div>
         </div>
       </div>
+
+      <div class="container legal-document-container">
+        <section class="legal-document-section" id="what-information-we-collect">
+          <h4 class="section__heading">What information we collect</h4>
+          <small>
+            When you invite Eliza in a guild we may store the guild's id and the id of each member.<span class="tiny-br"></span>
+            When voice recognition is enabled, we may process voice data in order to provide speech-based commands.<br>
+            Such data and the related transcripts never get stored nor leave our services as we do not rely on third-party services to analyze speech.
+          </small>
+        </section>
+
+        <section class="legal-document-section" id="how-we-use-your-information">
+          <h4 class="section__heading">How we use your information</h4>
+          <small>
+            Your information is used to ensure the proper functioning of our services.<br>
+            We take privacy very seriously, and therefore we don't share any of your information with third parties.<br>
+          </small>
+        </section>
+
+        <section class="legal-document-section" id="how-we-protect-your-information">
+          <h4 class="section__heading">How we protect your information</h4>
+          <small>
+            Whenever your information leaves one of our servers it is encrypted.
+          </small>
+        </section>
+
+        <section class="legal-document-section" id="how-long-we-keep-your-information">
+          <h4 class="section__heading">How long we keep your information</h4>
+          <small>
+            Any information is retained for as long as it's needed for the purposes for which we collected it.<br>
+            Whenever Eliza loses access to some information (e.g. when a member leaves a guild), such information gets deleted from our storage.
+          </small>
+        </section>
+
+        <section class="legal-document-section" id="changes">
+          <h4 class="section__heading">Changes</h4>
+          <small>
+            We may alter the contents of this Privacy Policy at any time for any reason.<br>
+            The date the last changes were published is always indicated.
+          </small>
+        </section>
+      </div>
+
+      <% include!("footer.stpl"); %>
     </main>
+
+    <script src="/static/scripts/main.js"></script>
   </body>
 </html>

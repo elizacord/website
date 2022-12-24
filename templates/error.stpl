@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <%
-      #[allow(non_upper_case_globals)]
-      const title: &str = "Eliza | Bringing voice-controlled music playback on Discord";
+      let status_code_u16 = status_code.as_u16();
+      let title = format!("Eliza | {}", status_code_u16);
 
       include!("head.stpl");
     %>
-    <link rel="stylesheet" type="text/css" href="/static/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/error.css">
   </head>
   <body>
     <% include!("desktop-nav.stpl"); %>
@@ -19,12 +19,15 @@
 
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
-              <h1 id="jumbotron__title">
-                Bringing<br>
-                voice-controlled<br>
-                music playback<br>
-                on <a id="discord" href="https://discord.com" target="_blank">Discord</a>
-              </h1>
+              <h1 id="jumbotron__title"><%= status_code_u16 %></h1>
+              <small id="jumbotron__subtitle">
+                <%-
+                  match status_code {
+                    StatusCode::NOT_FOUND => r#"There's nothing here, <a href="/">return home</a>."#,
+                    _ => unreachable!(),
+                  }
+                %>
+              </small>
             </div>
             <% include!("mobile-nav.stpl"); %>
           </div>

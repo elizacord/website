@@ -1,0 +1,19 @@
+#jumbotron__title {
+  font-size: 4rem;
+}
+
+#jumbotron__subtitle {
+  margin-bottom: 0;
+}
+
+@media (min-width: 720px) {
+  #jumbotron__title {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  #jumbotron__title {
+    font-size: 6rem;
+  }
+}

@@ -38,6 +38,9 @@ async fn main() {
       .service(web::resource("/").route(web::to(routes::index)))
       .service(web::resource("/privacy").route(web::to(routes::privacy)))
       .service(web::resource("/terms").route(web::to(routes::terms)))
+      .service(web::resource("/invite").route(web::to(routes::invite)))
+      .service(web::resource("/help").route(web::to(routes::help)))
+      .service(web::resource("/premium").route(web::to(routes::premium)))
       .default_service(web::to(routes::default))
   };
 

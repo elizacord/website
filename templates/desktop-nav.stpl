@@ -1,0 +1,9 @@
+<nav id="desktop-nav">
+  <ul id="desktop-nav__items">
+    <li class="desktop-nav__item"><a href="/privacy" data-content="Privacy">Privacy</a></li>
+    <li class="desktop-nav__item"><a href="/terms" data-content="Terms">Terms</a></li>
+    <li class="desktop-nav__item"><a href="/invite" target="_blank" data-content="Invite">Invite</a></li>
+    <li class="desktop-nav__item"><a href="/help" target="_blank" data-content="Help">Help</a></li>
+    <li class="desktop-nav__item"><a href="/premium" data-content="Premium">Premium</a></li>
+  </ul>
+</nav>
