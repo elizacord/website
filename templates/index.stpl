@@ -23,10 +23,105 @@
                 Bringing<br>
                 voice-controlled<br>
                 music playback<br>
-                on <a id="discord" href="https://discord.com" target="_blank">Discord</a>
+                on <a id="discord-pill" href="https://discord.com" target="_blank">Discord</a>
               </h1>
             </div>
             <% include!("components/mobile-nav.stpl"); %>
+          </div>
+        </div>
+      </div>
+
+      <div id="features">
+        <div class="features__row">
+          <div class="container feature-container" id="never-lose-focus">
+            <div class="feature-text">
+              <h4 class="feature-heading">Tired of alt-tabbing to play your favorite song? <span class="highlight">We've got you covered</span></h4>
+              <p class="feature-description">
+                Eliza allows you to control music by voice, without losing focus while gaming or working.
+              </p>
+            </div>
+            <div class="feature-illustration">
+              <div id="discord-mockup">
+                <div id="discord-mockup__channel">
+                  <svg id="discord-mockup__channel__icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.99329 11.9801V19.9668H9.31776L15.9734 26.6224V5.32452L9.31776 11.9801H3.99329ZM21.9634 15.9735C21.9634 13.6174 20.6057 11.5941 18.6356 10.6091V21.3246C20.6057 20.3529 21.9634 18.3296 21.9634 15.9735ZM18.6356 4.29956V7.04167C22.4825 8.18643 25.2912 11.7538 25.2912 15.9735C25.2912 20.1931 22.4825 23.7605 18.6356 24.9053V27.6474C23.9734 26.4361 27.9534 21.6707 27.9534 15.9735C27.9534 10.2763 23.9734 5.51088 18.6356 4.29956Z" fill="#696a6a"></path>
+                  </svg>
+                  <h5 id="discord-mockup__channel__name">studying</h5>
+                </div>
+                <ul id="discord-mockup__channel-members">
+                  <li class="discord-mockup__channel-member">
+                    <img class="discord-mockup__channel-member__avatar" src="https://cdn.discordapp.com/app-icons/706855160453791784/6d0dd9587a6cdb24c1e432a09014d0f5">
+                    <span>Eliza</span>
+                  </li>
+                  <li class="discord-mockup__channel-member speaking">
+                    <img class="discord-mockup__channel-member__avatar" src="https://cdn.discordapp.com/embed/avatars/0.png">
+                    <span>You</span>
+                  </li>
+                </ul>
+              </div>
+              <div id="speech-bubbles">
+                <span class="speech-bubble">Eliza disconnect</span>
+                <span class="speech-bubble">Eliza remove the first track</span>
+                <span class="speech-bubble">Hey Eliza, play Without Me by Halsey</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container feature-container" id="we-care-about-privacy">
+            <div class="feature-text">
+              <h4 class="feature-heading">Your <span class="highlight">privacy</span> is our <span class="highlight">priority</span></h4>
+              <p class="feature-description">
+                We care about your privacy and therefore speech recognition is done completely offline without relying on third parties. What you say never gets logged.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="features__row">
+          <div class="container feature-container" id="non-stop-listening">
+            <div class="feature-text">
+              <h4 class="feature-heading">Non-stop listening</h4>
+              <p class="feature-description">
+                Eliza will never leave your channel as long as you stay there.
+              </p>
+            </div>
+            <div class="feature-illustration">
+              <div id="twenty-four-slash-seven">
+                <span id="twenty-four-slash-seven__text">24/7</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container feature-container" id="volume-control">
+            <div class="feature-text">
+              <h4 class="feature-heading">Volume control</h4>
+              <p class="feature-description">
+                Adjust the volume to your liking, for free.
+              </p>
+            </div>
+            <div class="feature-illustration">
+              <div id="audio-waves">
+                <div class="audio-wave"></div>
+                <div class="audio-wave"></div>
+                <div class="audio-wave"></div>
+                <div class="audio-wave"></div>
+              </div>
+              <div id="audio-mixer">
+                <div class="audio-mixer__dial"></div>
+                <div class="audio-mixer__dial"></div>
+                <div class="audio-mixer__dial"></div>
+                <div class="audio-mixer__dial"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container feature-container">
+            <div class="feature-text">
+              <h4 class="feature-heading">Not interested in voice recognition?</h4>
+              <p class="feature-description">
+                You can opt out at any time and still enjoy top-notch music.
+              </p>
+            </div>
           </div>
         </div>
       </div>
