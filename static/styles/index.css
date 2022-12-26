@@ -66,8 +66,21 @@
   align-items: flex-end;
 }
 
+#non-stop-listening, #volume-control {
+  flex-direction: row;
+}
+
+#non-stop-listening > .feature-illustration {
+  width: fit-content;
+  margin-top: 0;
+  margin-left: 1.5rem;
+}
+
 #volume-control > .feature-illustration {
+  width: fit-content;
   display: flex;
+  margin-top: 0;
+  margin-left: 1.5rem;
 }
 
 #discord-mockup {
