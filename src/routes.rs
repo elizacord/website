@@ -4,7 +4,7 @@ use actix_web::http::{Method, StatusCode};
 use sailfish::TemplateOnce;
 
 const INVITE_URL: &str = "https://discord.com/oauth2/authorize?client_id=706855160453791784&scope=bot%20applications.commands&permissions=274914733057";
-const HELP_URL: &str = "https://discord.com/invite/Nxq6FbFYqp";
+const SUPPORT_URL: &str = "https://discord.com/invite/Nxq6FbFYqp";
 
 #[derive(TemplateOnce)]
 #[template(path = "error.stpl")]
@@ -80,8 +80,8 @@ pub async fn invite(req: HttpRequest) -> HttpResponse {
   redirect(req, INVITE_URL)
 }
 
-pub async fn help(req: HttpRequest) -> HttpResponse {
-  redirect(req, HELP_URL)
+pub async fn support(req: HttpRequest) -> HttpResponse {
+  redirect(req, SUPPORT_URL)
 }
 
 pub async fn premium(req: HttpRequest) -> HttpResponse {

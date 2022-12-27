@@ -3,7 +3,7 @@
     <li class="mobile-nav__item"><a href="/privacy">Privacy</a></li>
     <li class="mobile-nav__item"><a href="/terms">Terms</a></li>
     <li class="mobile-nav__item"><a href="/invite" target="_blank">Invite</a></li>
-    <li class="mobile-nav__item"><a href="/help" target="_blank">Help</a></li>
+    <li class="mobile-nav__item"><a href="/support" target="_blank">Support</a></li>
     <li class="mobile-nav__item"><a href="/premium">Premium</a></li>
   </ul>
 </nav>

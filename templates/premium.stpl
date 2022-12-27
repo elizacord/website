@@ -20,7 +20,7 @@
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
               <h1 id="jumbotron__title">Premium</h1>
-              <small id="jumbotron__subtitle">Coming soon, stay tuned by joining the <a href="/help" target="_blank">support server</a>.</small>
+              <small id="jumbotron__subtitle">Coming soon, stay tuned by joining the <a href="/support" target="_blank">support server</a>.</small>
             </div>
             <% include!("components/mobile-nav.stpl"); %>
           </div>
