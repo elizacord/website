@@ -19,12 +19,13 @@
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
               <h1 id="jumbotron__title">Privacy Policy</h1>
-              <small id="jumbotron__subtitle">Last updated: December 16, 2022</small>
+              <small id="jumbotron__subtitle">Last updated: December 28, 2022</small>
               <ul id="table-of-contents">
                 <li><a href="#what-information-we-collect">What information we collect</a></li>
                 <li><a href="#how-we-use-your-information">How we use your information</a></li>
                 <li><a href="#how-we-protect-your-information">How we protect your information</a></li>
                 <li><a href="#how-long-we-keep-your-information">How long we keep your information</a></li>
+                <li><a href="#cookies">Cookies</a></li>
                 <li><a href="#changes">Changes</a></li>
               </ul>
             </div>
@@ -63,6 +64,15 @@
           <small>
             Any information is retained for as long as it's needed for the purposes for which we collected it.<br>
             Whenever Eliza loses access to some information (e.g. when a member leaves a guild), such information gets deleted from our storage.
+          </small>
+        </section>
+
+        <section class="legal-document-section" id="cookies">
+          <h4 class="section__heading">Cookies</h4>
+          <small>
+            This website only uses cookies that are strictly necessary for its operation.<br>
+            This website's traffic is filtered by Cloudflare, a traffic optimization and distribution service provided by Cloudflare Inc.<br>
+            To learn more about the data processed by Cloudflare you may read <a href="https://cloudflare.com/privacypolicy" target="_blank">their privacy policy</a>.
           </small>
         </section>
 
