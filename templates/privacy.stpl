@@ -19,7 +19,7 @@
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
               <h1 id="jumbotron__title">Privacy Policy</h1>
-              <small id="jumbotron__subtitle">Last updated: December 28, 2022</small>
+              <small id="jumbotron__subtitle">Last updated: December 30, 2022</small>
               <ul id="table-of-contents">
                 <li><a href="#what-information-we-collect">What information we collect</a></li>
                 <li><a href="#how-we-use-your-information">How we use your information</a></li>
@@ -38,7 +38,7 @@
         <section class="legal-document-section" id="what-information-we-collect">
           <h4 class="section__heading">What information we collect</h4>
           <small>
-            When you invite Eliza in a guild we may store the guild's id and the id of each member.<span class="tiny-br"></span>
+            Depending on how you interact with our services we may store your user id and the id of the guilds where Eliza gets invited.<span class="tiny-br"></span>
             When voice recognition is enabled, we may process voice data in order to provide speech-based commands.<br>
             Such data and the related transcripts never get stored nor leave our services as we do not rely on third-party services to analyze speech.
           </small>
@@ -63,7 +63,7 @@
           <h4 class="section__heading">How long we keep your information</h4>
           <small>
             Any information is retained for as long as it's needed for the purposes for which we collected it.<br>
-            Whenever Eliza loses access to some information (e.g. when a member leaves a guild), such information gets deleted from our storage.
+            You can request the deletion of your data through our <a href="/support" target="_blank">support server</a>.<br>
           </small>
         </section>
 
