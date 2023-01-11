@@ -3,7 +3,7 @@ use actix_web::http::header::{self, ContentType};
 use actix_web::http::{Method, StatusCode};
 use sailfish::TemplateOnce;
 
-const INVITE_URL: &str = "https://discord.com/oauth2/authorize?client_id=706855160453791784&scope=bot%20applications.commands&permissions=274914733057";
+const INVITE_URL: &str = "https://discord.com/oauth2/authorize?client_id=706855160453791784&scope=bot%20applications.commands&permissions=274914642944";
 const SUPPORT_URL: &str = "https://discord.com/invite/Nxq6FbFYqp";
 
 #[derive(TemplateOnce)]
