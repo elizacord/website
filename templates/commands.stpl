@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%
+      #[allow(non_upper_case_globals)]
+      const title: &str = "Eliza | Commands";
+
+      include!("components/head.stpl");
+    %>
+    <link rel="stylesheet" type="text/css" href="/static/styles/commands.css">
+  </head>
+  <body>
+    <% include!("components/desktop-nav.stpl"); %>
+
+    <main>
+      <div class="container" id="jumbotron">
+        <div id="jumbotron-inner">
+          <% include!("components/jumbotron-header.stpl"); %>
+
+          <div id="jumbotron__content">
+            <div id="jumbotron__content-inner">
+              <h1 id="jumbotron__title">Commands</h1>
+              <small id="jumbotron__subtitle">Scroll down to see the list!</small>
+            </div>
+            <% include!("components/mobile-nav.stpl"); %>
+          </div>
+        </div>
+      </div>
+
+      <div id="search-and-commands">
+        <div class="container" id="search">
+          <span class="search__heading">Search</span>
+          <input type="text" autocomplete="off" id="search__text-input">
+          <span class="search__heading">Filters</span>
+          <label class="search__label">
+            <input type="checkbox" autocomplete="off" class="search__checkbox" id="speech-ready-checkbox">
+            <small class="search__label__text">Speech-ready</small>
+          </label>
+          <label class="search__label">
+            <input type="checkbox" autocomplete="off" class="search__checkbox" id="dms-checkbox">
+            <small class="search__label__text">DMs</small>
+          </label>
+        </div>
+
+        <div class="container" id="commands">
+          <small id="no-commands-text">There are no commands that match your query.</small>
+          <% for command in commands { %>
+            <div class="command" data-speech-ready="<%= command.speech_ready %>" data-dms="<%= command.dms %>">
+              <div class="command_name_and_options">
+                <span class="command__name">/<%= command.name %></span>
+                <% for option in command.options { %>
+                  <span class="command__option"><%= option %></span>
+                <% } %>
+              </div>
+              <small class="command__description"><%= command.description %></small>
+            </div>
+          <% } %>
+        </div>
+      </div>
+
+      <% include!("components/footer.stpl"); %>
+    </main>
+
+    <script src="/static/scripts/main.js"></script>
+    <script src="/static/scripts/commands.js"></script>
+  </body>
+</html>

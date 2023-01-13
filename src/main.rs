@@ -41,6 +41,7 @@ async fn main() {
       .service(web::resource("/invite").route(web::to(routes::invite)))
       .service(web::resource("/support").route(web::to(routes::support)))
       .service(web::resource("/premium").route(web::to(routes::premium)))
+      .service(web::resource("/commands").route(web::to(routes::commands)))
       .default_service(web::to(routes::default))
   };
 

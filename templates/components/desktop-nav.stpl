@@ -1,7 +1,7 @@
 <nav id="desktop-nav">
   <ul id="desktop-nav__items">
-    <li class="desktop-nav__item"><a href="/privacy" data-content="Privacy">Privacy</a></li>
-    <li class="desktop-nav__item"><a href="/terms" data-content="Terms">Terms</a></li>
+    <li class="desktop-nav__item"><a href="/" data-content="Home">Home</a></li>
+    <li class="desktop-nav__item"><a href="/commands" data-content="Commands">Commands</a></li>
     <li class="desktop-nav__item"><a href="/invite" target="_blank" data-content="Invite">Invite</a></li>
     <li class="desktop-nav__item"><a href="/support" target="_blank" data-content="Support">Support</a></li>
     <li class="desktop-nav__item"><a href="/premium" data-content="Premium">Premium</a></li>
