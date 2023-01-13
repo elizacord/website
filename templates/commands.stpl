@@ -45,9 +45,19 @@
         <div class="container" id="commands">
           <small id="no-commands-text">There are no commands that match your query.</small>
           <% for command in commands { %>
-            <div class="command" data-speech-ready="<%= command.speech_ready %>" data-dms="<%= command.dms %>">
+            <div class="command" data-speech-ready="<%= command.speech_example.is_some() %>" data-dms="<%= command.dms %>">
               <div class="command_name_and_options">
                 <span class="command__name">/<%= command.name %></span>
+
+                <% if let Some(speech_example) = command.speech_example { %>
+                  <span class="speech-ready-icon" tooltip="e.g. &quot;Hey Eliza, <%= speech_example %>&quot;">
+                    <svg viewBox="0 0 512 512" class="speech-ready-icon__svg">
+                      <path d="M440 236a20 20 0 10-41 0c0 70-64 127-143 127s-143-57-143-127a20 20 0 10-40 0c0 86 71 157 163 167v57h-24a20 20 0 100 41h88a20 20 0 100-41h-24v-57c92-10 163-81 163-167z"></path>
+                      <path d="M256 324c51 0 92-42 92-93V103a92 92 0 10-184 0v128c0 51 41 92 92 92zm-52-221a52 52 0 01104 0v128a52 52 0 01-104 0V103z"></path>
+                    </svg>
+                  </span>
+                <% } %>
+
                 <% for option in command.options { %>
                   <span class="command__option"><%= option %></span>
                 <% } %>

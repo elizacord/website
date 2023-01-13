@@ -116,6 +116,7 @@ input {
 
 .command_name_and_options {
   display: flex;
+  align-items: center;
   gap: 0.375rem;
 }
 
@@ -127,6 +128,80 @@ input {
 .command__name:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.speech-ready-icon {
+  height: 0.875rem;
+  padding: 0.1875rem 0.1875rem;
+  border-radius: 0.375rem;
+  fill: var(--secondary-text-color);
+  background: #2f3136;
+  transition: fill 0.3s ease-out;
+}
+
+.speech-ready-icon:hover {
+  fill: var(--primary-text-color);
+}
+
+.speech-ready-icon__svg {
+  height: 100%;
+  display: block;
+}
+
+[tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[tooltip]::before, [tooltip]::after {
+  position: absolute;
+  display: none;
+  left: 50%;
+  line-height: 1;
+  font-size: small;
+  text-transform: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -0.5em);
+}
+
+[tooltip]::before {
+  bottom: 100%;
+  content: "";
+  border: 5px solid transparent;
+  border-bottom-width: 0;
+  border-top-color: #2f3136;
+  z-index: 1001;
+}
+
+[tooltip]::after {
+  min-width: 3em;
+  max-width: 21em;
+  bottom: calc(100% + 5px);
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.375rem;
+  content: attr(tooltip);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--secondary-text-color);
+  background: #2f3136;
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+}
+
+@keyframes tooltip-animation {
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+[tooltip]:hover::before, [tooltip]:hover::after {
+  display: block;
+  animation: tooltip-animation 0.3s ease-out forwards;
 }
 
 .command__option {

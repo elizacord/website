@@ -97,21 +97,21 @@ pub async fn premium(req: HttpRequest) -> HttpResponse {
 struct Command<'c> {
   name: &'c str,
   description: &'c str,
-  speech_ready: bool,
+  speech_example: Option<&'c str>,
   dms: bool,
   options: &'c [&'c str],
 }
 
 impl<'c> Command<'c> {
-  const fn new(name: &'c str, description: &'c str, speech_ready: bool, dms: bool) -> Self {
-    Self::new_with_options(name, description, speech_ready, dms, &[])
+  const fn new(name: &'c str, description: &'c str, speech_example: Option<&'c str>, dms: bool) -> Self {
+    Self::new_with_options(name, description, speech_example, dms, &[])
   }
 
-  const fn new_with_options(name: &'c str, description: &'c str, speech_ready: bool, dms: bool, options: &'c [&str]) -> Self {
+  const fn new_with_options(name: &'c str, description: &'c str, speech_example: Option<&'c str>, dms: bool, options: &'c [&str]) -> Self {
     Self {
       name,
       description,
-      speech_ready,
+      speech_example,
       dms,
       options,
     }
@@ -120,27 +120,27 @@ impl<'c> Command<'c> {
 
 pub async fn commands(req: HttpRequest) -> HttpResponse {
   const COMMANDS: [Command; 21] = [
-    Command::new_with_options("fast-forward", "Forward the player by the specified amount of seconds.", false, false, &["seconds"]),
-    Command::new("join", "Connect me to your voice channel.", false, false),
-    Command::new("leave", "Disconnect me from your voice channel.", true, false),
-    Command::new("loop", "Toggle track loop.", false, false),
-    Command::new("pause", "Pause the audio playback.", true, false),
-    Command::new_with_options("play", "Play a track or add it to the queue.", true, false, &["what"]),
-    Command::new("queue clear", "Remove all tracks from the queue.", false, false),
-    Command::new("queue list", "View information about the queued tracks.", false, false),
-    Command::new_with_options("queue remove", "Remove a specific track from the queue.", true, false, &["index"]),
-    Command::new("queue shuffle", "Randomize the order of tracks in queue.", false, false),
-    Command::new("resume", "Resume the audio playback.", true, false),
-    Command::new_with_options("rewind", "Rewind the player by the specified amount of seconds.", false, false, &["seconds"]),
-    Command::new_with_options("skip", "Skip to the next track or to the specified track index.", true, false, &["to"]),
-    Command::new("stop", "End the audio playback and clear the queue.", true, false),
-    Command::new("track", "View information about the current track.", false, false),
-    Command::new("user rank", "View your rank card.", false, true),
-    Command::new("user voice-recognition disable", "Disable voice recognition.", false, true),
-    Command::new("user voice-recognition enable", "Enable voice recognition.", false, true),
-    Command::new("user voice-recognition status", "View whether voice recognition is enabled or disabled.", false, true),
-    Command::new("volume get", "View the volume.", true, false),
-    Command::new_with_options("volume set", "Modify the volume.", true, false, &["value"]),
+    Command::new_with_options("fast-forward", "Forward the player by the specified amount of seconds.", None, false, &["seconds"]),
+    Command::new("join", "Connect me to your voice channel.", None, false),
+    Command::new("leave", "Disconnect me from your voice channel.", Some("disconnect"), false),
+    Command::new("loop", "Toggle track loop.", None, false),
+    Command::new("pause", "Pause the audio playback.", Some("pause"), false),
+    Command::new_with_options("play", "Play a track or add it to the queue.", Some("play Never Gonna Give You Up"), false, &["what"]),
+    Command::new("queue clear", "Remove all tracks from the queue.", None, false),
+    Command::new("queue list", "View information about the queued tracks.", None, false),
+    Command::new_with_options("queue remove", "Remove a specific track from the queue.", Some("remove the first track"), false, &["index"]),
+    Command::new("queue shuffle", "Randomize the order of tracks in queue.", None, false),
+    Command::new("resume", "Resume the audio playback.", Some("resume"), false),
+    Command::new_with_options("rewind", "Rewind the player by the specified amount of seconds.", None, false, &["seconds"]),
+    Command::new_with_options("skip", "Skip to the next track or to the specified track index.", Some("skip"), false, &["to"]),
+    Command::new("stop", "End the audio playback and clear the queue.", Some("stop"), false),
+    Command::new("track", "View information about the current track.", None, false),
+    Command::new("user rank", "View your rank card.", None, true),
+    Command::new("user voice-recognition disable", "Disable voice recognition.", None, true),
+    Command::new("user voice-recognition enable", "Enable voice recognition.", None, true),
+    Command::new("user voice-recognition status", "View whether voice recognition is enabled or disabled.", None, true),
+    Command::new("volume get", "View the volume.", Some("what's the volume"), false),
+    Command::new_with_options("volume set", "Modify the volume.", Some("set the volume at 75"), false, &["value"]),
   ];
 
   render_ok(req, CommandsTemplate {
