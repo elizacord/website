@@ -119,8 +119,9 @@ impl<'c> Command<'c> {
 }
 
 pub async fn commands(req: HttpRequest) -> HttpResponse {
-  const COMMANDS: [Command; 21] = [
+  const COMMANDS: [Command; 22] = [
     Command::new_with_options("fast-forward", "Forward the player by the specified amount of seconds.", None, false, &["seconds"]),
+    Command::new("help", "View useful information.", None, true),
     Command::new("join", "Connect me to your voice channel.", None, false),
     Command::new("leave", "Disconnect me from your voice channel.", Some("disconnect"), false),
     Command::new("loop", "Toggle track loop.", None, false),
