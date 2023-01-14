@@ -82,6 +82,7 @@
 #never-lose-focus > .feature-illustration {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 
 #non-stop-listening, #volume-control {
