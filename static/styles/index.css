@@ -7,6 +7,7 @@
 #jumbotron {
   background-image: url("/static/images/waves.svg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #jumbotron__content-inner {
@@ -314,6 +315,10 @@ footer {
 }
 
 @media (min-width: 1040px) {
+  #jumbotron {
+    background-size: contain;
+  }
+
   #discord-pill {
     padding: 0.3rem 1rem;
     font-size: 2.5rem;
