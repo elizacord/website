@@ -137,9 +137,9 @@ pub async fn commands(req: HttpRequest) -> HttpResponse {
     Command::new("stop", "End the audio playback and clear the queue.", Some("stop"), false),
     Command::new("track", "View information about the current track.", None, false),
     Command::new("user rank", "View your rank card.", None, true),
-    Command::new("user voice-recognition disable", "Disable voice recognition.", None, true),
-    Command::new("user voice-recognition enable", "Enable voice recognition.", None, true),
-    Command::new("user voice-recognition status", "View whether voice recognition is enabled or disabled.", None, true),
+    Command::new("user speech-recognition disable", "Disable speech recognition.", None, true),
+    Command::new("user speech-recognition enable", "Enable speech recognition.", None, true),
+    Command::new("user speech-recognition status", "View whether speech recognition is enabled or disabled.", None, true),
     Command::new("volume get", "View the volume.", Some("what's the volume"), false),
     Command::new_with_options("volume set", "Modify the volume.", Some("set the volume at 75"), false, &["value"]),
   ];
