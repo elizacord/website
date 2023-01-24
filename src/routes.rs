@@ -119,7 +119,7 @@ impl<'c> Command<'c> {
 }
 
 pub async fn commands(req: HttpRequest) -> HttpResponse {
-  const COMMANDS: [Command; 22] = [
+  const COMMANDS: [Command; 20] = [
     Command::new_with_options("fast-forward", "Forward the player by the specified amount of seconds.", None, false, &["seconds"]),
     Command::new("help", "View useful information.", None, true),
     Command::new("join", "Connect me to your voice channel.", None, false),
@@ -137,9 +137,7 @@ pub async fn commands(req: HttpRequest) -> HttpResponse {
     Command::new("stop", "End the audio playback and clear the queue.", Some("stop"), false),
     Command::new("track", "View information about the current track.", None, false),
     Command::new("user rank", "View your rank card.", None, true),
-    Command::new("user speech-recognition disable", "Disable speech recognition.", None, true),
-    Command::new("user speech-recognition enable", "Enable speech recognition.", None, true),
-    Command::new("user speech-recognition status", "View whether speech recognition is enabled or disabled.", None, true),
+    Command::new("user settings", "View and modify your settings.", None, true),
     Command::new("volume get", "View the volume.", Some("what's the volume"), false),
     Command::new_with_options("volume set", "Modify the volume.", Some("set the volume at 75"), false, &["value"]),
   ];
