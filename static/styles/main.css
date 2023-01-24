@@ -272,7 +272,7 @@ footer {
 }
 
 footer > section {
-  flex: 1;
+  flex: 0.5;
 }
 
 @media (min-width: 720px) {
@@ -290,6 +290,14 @@ footer > section {
 
   #jumbotron__title {
     font-size: 3rem;
+  }
+
+  footer {
+    justify-content: flex-start;
+  }
+
+  footer > section {
+    flex: 0.25;
   }
 }
 
@@ -401,5 +409,9 @@ footer > section {
 
   #jumbotron__title {
     font-size: 3.5rem;
+  }
+
+  footer > section {
+    flex: 0.15;
   }
 }

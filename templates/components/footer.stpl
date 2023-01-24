@@ -8,4 +8,14 @@
       </ul>
     </small>
   </section>
+  <section>
+    <h4 class="section__heading">Vote</h4>
+    <small>
+      <ul>
+        <li><a href="https://voidbots.net/bot/706855160453791784">Void Bots</a></li>
+        <li><a href="https://top.gg/bot/706855160453791784">Top.gg</a></li>
+        <li><a href="https://discordbotlist.com/bots/eliza">Discord Bot List</a></li>
+      </ul>
+    </small>
+  </section>
 </footer>
