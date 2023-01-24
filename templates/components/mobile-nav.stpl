@@ -2,8 +2,8 @@
   <ul id="mobile-nav__items">
     <li class="mobile-nav__item"><a href="/">Home</a></li>
     <li class="mobile-nav__item"><a href="/commands">Commands</a></li>
-    <li class="mobile-nav__item"><a href="/invite" target="_blank">Invite</a></li>
-    <li class="mobile-nav__item"><a href="/support" target="_blank">Support</a></li>
+    <li class="mobile-nav__item"><a href="<%= INVITE_URL %>" target="_blank">Invite</a></li>
+    <li class="mobile-nav__item"><a href="<%= SUPPORT_URL %>" target="_blank">Support</a></li>
     <li class="mobile-nav__item"><a href="/premium">Premium</a></li>
   </ul>
 </nav>

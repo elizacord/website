@@ -1,5 +1,5 @@
 use actix_web::{HttpRequest, HttpResponse};
-use actix_web::http::header::{self, ContentType};
+use actix_web::http::header::ContentType;
 use actix_web::http::{Method, StatusCode};
 use sailfish::TemplateOnce;
 
@@ -54,14 +54,6 @@ fn render_ok<T: TemplateOnce>(req: HttpRequest, template: T) -> HttpResponse {
   render(req, template, StatusCode::OK)
 }
 
-fn redirect(req: HttpRequest, url: &str) -> HttpResponse {
-  if req.method() != &Method::GET {
-    HttpResponse::MethodNotAllowed().finish()
-  } else {
-    HttpResponse::Found().insert_header((header::LOCATION, url)).finish()
-  }
-}
-
 pub async fn default(req: HttpRequest) -> HttpResponse {
   if req.method() != &Method::GET {
     HttpResponse::NotFound().finish()
@@ -80,14 +72,6 @@ pub async fn privacy(req: HttpRequest) -> HttpResponse {
 
 pub async fn terms(req: HttpRequest) -> HttpResponse {
   render_ok(req, TermsTemplate)
-}
-
-pub async fn invite(req: HttpRequest) -> HttpResponse {
-  redirect(req, INVITE_URL)
-}
-
-pub async fn support(req: HttpRequest) -> HttpResponse {
-  redirect(req, SUPPORT_URL)
 }
 
 pub async fn premium(req: HttpRequest) -> HttpResponse {
