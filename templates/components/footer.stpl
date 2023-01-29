@@ -18,4 +18,12 @@
       </ul>
     </small>
   </section>
+  <section>
+    <h4 class="section__heading">Other</h4>
+    <small>
+      <ul>
+        <li><a href="https://github.com/elizagg">GitHub</a></li>
+      </ul>
+    </small>
+  </section>
 </footer>
