@@ -19,7 +19,7 @@
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
               <h1 id="jumbotron__title">Privacy Policy</h1>
-              <small id="jumbotron__subtitle">Last updated: January 19, 2023</small>
+              <small id="jumbotron__subtitle">Last updated: January 29, 2023</small>
               <ul id="table-of-contents">
                 <li><a href="#what-information-we-collect">What information we collect</a></li>
                 <li><a href="#how-we-use-your-information">How we use your information</a></li>
@@ -63,7 +63,7 @@
           <h4 class="section__heading">How long we keep your information</h4>
           <small>
             Any information is retained for as long as it's needed for the purposes for which we collected it.<br>
-            You can request the deletion of your data through our <a href="/support" target="_blank">support server</a>.<br>
+            You can request the deletion of your data through our <a href="<%= SUPPORT_URL %>" target="_blank">support server</a>.<br>
           </small>
         </section>
 
