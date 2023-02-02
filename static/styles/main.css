@@ -10,7 +10,6 @@
 }
 
 body {
-  width: 100vw;
   height: 100vh;
   display: flex;
   margin: 0;
@@ -314,7 +313,7 @@ footer > section {
   }
 
   #desktop-nav {
-    width: 4.5rem;
+    width: 4.25rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -323,8 +322,10 @@ footer > section {
   }
 
   #desktop-nav__items {
+    width: 4.25rem;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -414,5 +415,15 @@ footer > section {
 
   footer > section {
     flex: 0.15;
+  }
+}
+
+@media (min-width: 2080px) and (min-aspect-ratio: 21 / 9) {
+  nav {
+    margin-left: 17.5vw;
+  }
+
+  main {
+    padding-right: 17.5vw;
   }
 }
