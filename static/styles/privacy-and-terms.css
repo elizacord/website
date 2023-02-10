@@ -1,0 +1,26 @@
+#jumbotron__title-and-subtitle {
+  padding-left: 0.625rem;
+  padding-bottom: 0.125rem;
+  margin-bottom: 1rem;
+  border-left: 0.25rem solid var(--primary-text-color);
+  line-height: 0.75;
+}
+
+#jumbotron__title {
+  margin-bottom: 0.625rem;
+}
+
+#table-of-contents {
+  padding-left: 0.8rem;
+  margin: 0;
+}
+
+@media (min-width: 1040px) {
+  #jumbotron__title-and-subtitle {
+    border-left-width: 0.375rem;
+  }
+
+  #table-of-contents {
+    padding-left: 0.85rem;
+  }
+}

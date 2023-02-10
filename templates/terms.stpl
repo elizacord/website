@@ -7,6 +7,7 @@
 
       include!("components/head.stpl");
     %>
+    <link rel="stylesheet" type="text/css" href="/static/styles/privacy-and-terms.css">
   </head>
   <body>
     <% include!("components/desktop-nav.stpl"); %>
@@ -18,8 +19,10 @@
 
           <div id="jumbotron__content">
             <div id="jumbotron__content-inner">
-              <h1 id="jumbotron__title">Terms of Service</h1>
-              <small id="jumbotron__subtitle">Last updated: November 18, 2022</small>
+              <div id="jumbotron__title-and-subtitle">
+                <h1 id="jumbotron__title">Terms of Service</h1>
+                <small id="jumbotron__subtitle">Last updated: November 18, 2022</small>
+              </div>
               <ul id="table-of-contents">
                 <li><a href="#definitions">Definitions</a></li>
                 <li><a href="#acknowledgement">Acknowledgement</a></li>

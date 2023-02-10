@@ -154,13 +154,7 @@ main {
 
 #jumbotron__subtitle {
   display: inline-block;
-  margin-bottom: 1rem;
   color: var(--secondary-text-color);
-}
-
-#table-of-contents {
-  padding-left: 1.25rem;
-  margin: 0;
 }
 
 #mobile-nav {
