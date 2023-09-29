@@ -14,6 +14,9 @@
 
     <main>
       <div class="container" id="jumbotron">
+        <svg style="position: absolute; height: 100%; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;" viewBox="0 0 1080 2160">
+          <path d="M0.795373 0L932.256 1.13718C932.256 1.13718 352.754 142.931 174.13 804.937C143.22 919.492 147.84 1082.83 179.866 1246.3C220.027 1451.3 296.005 1657.77 316.187 1782.84C335.709 1903.82 339.465 1986.2 341.297 2042.32C344.791 2149.29 329.132 2160 329.132 2160L0 2160L0.795373 0Z" fill="#dc3545" fill-rule="nonzero" opacity="1"></path>
+        </svg>
         <div id="jumbotron-inner">
           <% include!("components/jumbotron-header.stpl"); %>
 

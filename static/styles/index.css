@@ -5,9 +5,7 @@
 }
 
 #jumbotron {
-  background-image: url("/static/images/waves.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
 
 #jumbotron__content-inner {
